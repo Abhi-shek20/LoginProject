@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=OE=edge"">
+    <title>login</title>
+</head>
+<style>
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   body{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+   }
+   .form{
+       width: 350px;
+       height: 400px;
+       background-color: cadetblue;
+       display: flex;
+       flex-direction: column;
+       align-content: center;
+       align-items: center;
+       padding: 30px;
+
+      }
+   .user img{
+       width: 70px;
+       align-items: center;
+       align-content: center;
+   }
+   .field{
+       display: flex: ;
+       flex-direction: column;
+       width: 100%;
+       margin: 15px;
+   }
+   .field input{
+       width: 100%;
+   }
+   button {
+     border: none;
+     outline: none;
+     background-color: darkgray;
+     width: 100%;
+     padding: 10px;
+     color: brown;
+     border-radius: 5px;
+   }
+   p{
+       background-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1fYUJTGP_7VICM1ogQKKOLASmTGkRWfXM3g&s";
+   }
+</style>
+<body>
+   <form action="logdata.php" method="get">
+   <div class ="form">
+       <div class ="user">
+
+           <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKEAAACUCAMAAADMOLmaAAAAY1BMVEX///8AAAD+/v4EBASrq6v7+/u8vLzh4eHn5+f29vbr6+vy8vLv7+9EREQ6OjpfX18sLCxnZ2fW1tZYWFhMTEzMzMzFxcWGhoY/Pz8lJSV7e3uVlZU0NDQdHR2enp51dXUWFhZew6jgAAAJKElEQVR4nO1b2YKiOhCNgYRFBGVVUfT/v/KmqhIECagD2g+X0zM9PQLJoVJ70oytWLFixYoVK1asWPG/AueM43f4xjn9TD/Ahfb734ETA81OcEOTiP4xOQK38+B/L7wHuGAiCr2yOSdZvttlybkpvXAr8NpfkwMIv3DP+eYZu7Nb+OLPOIL2cQGTR7LK90jJGZDc55WMGCmC1s/fAdmxID1fBrz6uNyKADiKHzPE6UKZdKg4z1JsP0hkSMb9UxlyJmQ+INWH48AfQC7Frwkqfllf9fa77Fa7UpbSdetbttv3hLnJFEfxK44wj1ehjBzNMavdIgqEIcBFEBVunfXs5+zBi32dJeif8iDySJPj9HHtRU930T9RWu8MSfU3loz9yFz882MF4zpFSlz0Zm4jXlrH7Upvzv5vtDFNyApA+RpPILkn2fBH6iC85kIaoZ5I0l/E6uJhA5UP0VegQ+7GDvIs3MRmv3rYU/E9Yjq9Eq7xdPeb//bD/s0xauuiTX9LkGrg5q6nit3gXcVX9wRurFf63iipi68wxEFds1y5Z3LWdx5V5u/lRhndL5kL5qeuNst7pTm/NZUglazu+mlXfCXhgTHllVb47oqHHVjvfP4IpCZcTfEqv8APkxnPeN/RGXRBMHZZmgDjwU0LKyNEuh0Z8bW0k6DSBNbUehUIlSeys523vC5ytr2Rn3bKkdE1wxHtJB9Z6gh4237BdTc6FLuT9tEtQ/sA2QrmaooNW3SVYahUq1AzUcT5qpi6qTLK1w/1AiGjYrXWyrxo/IMYIA4Uig/ByDsIFjY5WcI9b0KMPwMK4LsPFNUPQuhP5gPMzrjqfWAVIKpY3Emv4xLc9HB69cl2T0J0teUvwVB9eZgQghmP3GLidZtqqaBolaF6lSsux9FbgFs7P6vJjiu7CNWHkqYlkhDclFse5tOw8kJUdFu9JEOf8pLcY8J+S3p65Kk6ezylQ69EnkiFaLjx7i8W/DjTBihHJMjZYTPEYcQMlMDphnq06fMxtBaeTC/uecbWFfWRjsZtkvhxqcjCwZBhWTAcW4bkrLIyrEYH1EJ0l/KJ2wSDaYItGNsNQWIt7ZMR38lpRFXEbheQIQxQkIG61szF+CILw53dnwjwTTTkAoEF3xGrdzXf6GCpvb10Se1jwjthngR6MJuh+gpy8oXjkV4xtPVvRhjCsJw0Nx/xr58wJEOF+TGO2W/xdhZ+ztgqwzOsxDvGzP0zhpxC8pWNrYhSK5s7hORglCBnV23NY/d8wDC40XTM4gqZzlurvqXon6txAQnw8ZDJ2s39I4oszLUztGRTBp7VUiZTA0lxNJxNkEMXxMHpphprlcXdVFNZNKeXmt8lUaSoQMvDCdfVZmfdVT56U+6Yh7R7MLsw5VSfOJuz4HZT1pD3JwneJ9WC8YBafM18hoL8dTPtWwUrTj2Cp+LV/kSDSVo115YZmfLLIA/62nU5h1f6xXVdcQjsLuIDRKgvKmOeYojbJRE231Fp5ZTWakj0iHk0NzTz8KRtbpIhJPfq36hs6rqEHEi8XD3qlJ7C2TL00TAv01kINo46M4FVvZo3xdrQ8WcnDz6uWzzhfdvSPQg9Qij0hfGNKOWgqHqdy5BrhsepjjBusJRVkl/2hEueVNh4wLJ+hMCD4Sy0DCfSFCWwtDo+hxRnV6VsyuP4x0UYvrPKzK/AmpxB2DtV4UQfeSEZMhZewWGPJ6NMSMqwnxliX0GOWwwl5te5qYPycrHxNrY6FKJiP5g8ibEZacdz7HaqxYlmWrIqyzLcPJGWkx84dT3BD1Bjaj6kISiSq3JvJsNOhLcIQojmBUHo/NsbdfTk/BRW8NqIwqZRKl+Y2gPHhS4gTxw+W2OWVi9Q0usIv7U0A9nWVkI9I97aarA2I5kJbiL83reFPXs3pAcH65Xh2/kYlnFrZa4YVfykKmA4kv/qoAjhYmvDURUQj3ux9xFlejmGtuxO8erAHSyySQ+z6PnKP0Al2dBXyocMI1uZbEMy4MEZlSkTjYx3AYpI00RP+s51/vQG4rT7dpgLhabhtwRD70o7mn0hcs7eXeRni+XtIl+9ZRrFGbbO+76V6yrwHTjDik77mmyR3QqOVRmk2d3B1IKL8wtmD5z74hdGQZqFmrDkuvqFI5xfeddQlKwE7z9KjnS/1G6ALpnjXiqnYnLyMuKZVe4zVGlxjB9XIzu9n0NuKIayR04Px2yyV9RaJEF/E1InRJItdCYDtx1hxE7HVKjB32X4JEPlSOlz2HxcaoNUbvSqmGwUN+Pfl2GfodbC+V0lA+hy7jCrv7S9DsxKpfsuZE9UBYXzXbDcQTWBLTpFMQtNYOHTrTDLW7YIM3OeY7FFVmzAw9J+pjkK/tnQvENUm8ktWGj/W3eq6ZTHxinYnCO3UA0UtM96WvKMGpYZ9cY0cGacFlUPwt4LrcaCJzGg/SqCI1E8hLM2NEMdiI7BkicxqLVR6vMJt38/taX0hTKGzalc+jALvK9rtknIS7wvArwTDx0GFD/NLuayEAwqZyRZfXiGnny8oJ64Y+x4aWAPk045qmQqMIeKPxmAXhGev8xvr1sgFCEv0w2kQ4r//4yhp88CbbL5/a4RhspVHDXFvPg4Oy6wdlJPH9NXpwDnwDMbO1eXTvq/tEh9j3Cv+sn7F072PWYTdJx1QyutbXwqAmqj56lZYTiz83HM/IAhVBiJ+b2OYxOSBU0f9lMXw6Y9CJGk0680lyHEu+1hYzjusJnwip9wd3SM2IEGFR7y+yJFVL3mSgkt5HiuP0UQOkjATwvwWuuU8Gt6qLdImOz8NkJep0HnKq2gIbBNq86veMWStzd+Faq6CCtt00gyq2UUPE/Kg62su3XCvfqOG7QAl6nsFSnOJallmfrbALLdyE9LWSdtV4dkXX7RQIYM1VSRu6fZ212K+z5PDofb4ZDll8d+OF3du6Fx0T+gafKGqM6dHo0xOHnd2aP9lSARvvvcGHE6nM2Pieuz2cdq/g1KmNuietEZqQr6rcc/Yah5FlVyuXbPl2pcL0lVYPL6zSgyzc2ksdtU1udDHhv7uMf54VzLdMt0Yf13DA1PJSfyMYiySP0oEOaiwA38FStWrFixYsWKFStWrFixYsWKFStWrFgc/wGtkVG7Afr8iwAAAABJRU5ErkJggg==" alt="">
+           <div class="field">
+               <label>Email</label>
+               <input type="text" name="email">
+           </div>
+           <div class="field">
+               <label>Password</label>
+               <input type="Password" name="pass">
+           </div>
+           <div class="opt">
+                <input type="radio">Remember password<br>
+           </div>
+
+       </div>
+       <br><input type="submit">
+    <br><br>
+    I Don't have an account.
+   </div>
+  </form>
+</body>
+</html>
